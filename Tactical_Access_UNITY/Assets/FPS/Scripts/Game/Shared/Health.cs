@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace Unity.FPS.Game
 {
@@ -74,7 +75,11 @@ namespace Unity.FPS.Game
         void HandleDeath()
         {
             if (m_IsDead)
+            {
+                SceneManager.LoadScene(0);
                 return;
+            }
+                
 
             // call OnDie action
             if (CurrentHealth <= 0f)

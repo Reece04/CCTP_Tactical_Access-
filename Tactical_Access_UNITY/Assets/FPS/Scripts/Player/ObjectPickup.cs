@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.FPS.Game;
 using UnityEngine;
 
 public class ObjectPickup : MonoBehaviour
@@ -21,7 +22,7 @@ public class ObjectPickup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown(GameConstants.k_ButtonNameGamepadSwitchWeapon))
         {
             if (isHoldingObject)
             {
