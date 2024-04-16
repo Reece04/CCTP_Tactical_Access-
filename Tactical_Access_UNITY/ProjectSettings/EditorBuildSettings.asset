@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_2(Cataract).unity
     guid: 09193bfe39482c4429b25fac73136b63
+  - enabled: 1
+    path: Assets/Scenes/Level_3(Glaucoma).unity
+    guid: eacc3b94ff02a8e43a254418b5c8dbe7
   m_configObjects: {}
