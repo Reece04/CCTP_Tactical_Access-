@@ -17,14 +17,14 @@ namespace Unity.FPS.UI
         [Tooltip("Slider component for look sensitivity")]
         public Slider LookSensitivitySlider;
 
-        [Tooltip("Toggle component for shadows")]
-        public Toggle ShadowsToggle;
+        //[Tooltip("Toggle component for shadows")]
+        //public Toggle ShadowsToggle;
 
         [Tooltip("Toggle component for invincibility")]
         public Toggle InvincibilityToggle;
 
-        [Tooltip("Toggle component for framerate display")]
-        public Toggle FramerateToggle;
+        //[Tooltip("Toggle component for framerate display")]
+        //public Toggle FramerateToggle;
 
         [Tooltip("GameObject for the controls")]
         public GameObject ControlImage;
@@ -42,22 +42,22 @@ namespace Unity.FPS.UI
             m_PlayerHealth = m_PlayerInputsHandler.GetComponent<Health>();
             DebugUtility.HandleErrorIfNullGetComponent<Health, InGameMenuManager>(m_PlayerHealth, this, gameObject);
 
-            m_FramerateCounter = FindObjectOfType<FramerateCounter>();
-            DebugUtility.HandleErrorIfNullFindObject<FramerateCounter, InGameMenuManager>(m_FramerateCounter, this);
+            //m_FramerateCounter = FindObjectOfType<FramerateCounter>();
+            //DebugUtility.HandleErrorIfNullFindObject<FramerateCounter, InGameMenuManager>(m_FramerateCounter, this);
 
             MenuRoot.SetActive(false);
 
             LookSensitivitySlider.value = m_PlayerInputsHandler.LookSensitivity;
             LookSensitivitySlider.onValueChanged.AddListener(OnMouseSensitivityChanged);
 
-            ShadowsToggle.isOn = QualitySettings.shadows != ShadowQuality.Disable;
-            ShadowsToggle.onValueChanged.AddListener(OnShadowsChanged);
+            //ShadowsToggle.isOn = QualitySettings.shadows != ShadowQuality.Disable;
+            //ShadowsToggle.onValueChanged.AddListener(OnShadowsChanged);
 
             InvincibilityToggle.isOn = m_PlayerHealth.Invincible;
             InvincibilityToggle.onValueChanged.AddListener(OnInvincibilityChanged);
 
-            FramerateToggle.isOn = m_FramerateCounter.UIText.gameObject.activeSelf;
-            FramerateToggle.onValueChanged.AddListener(OnFramerateCounterChanged);
+            //FramerateToggle.isOn = m_FramerateCounter.UIText.gameObject.activeSelf;
+            //FramerateToggle.onValueChanged.AddListener(OnFramerateCounterChanged);
         }
 
         void Update()
