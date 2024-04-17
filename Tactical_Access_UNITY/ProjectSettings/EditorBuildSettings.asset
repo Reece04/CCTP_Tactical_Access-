@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_3(Glaucoma).unity
     guid: eacc3b94ff02a8e43a254418b5c8dbe7
+  - enabled: 1
+    path: Assets/Scenes/Level_4(AMD).unity
+    guid: d68197620312fc143ad1883ff4303522
   m_configObjects: {}
